@@ -1,0 +1,14 @@
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\SimpleThing.exe
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\SimpleThing.pdb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\obj\x86\Debug\SimpleThing.exe
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\obj\x86\Debug\SimpleThing.pdb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\ground.xnb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\playerRight.xnb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\playerLeft.xnb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\wall.xnb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\spike.xnb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Dead.xnb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\key.xnb
+C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\door.xnb
