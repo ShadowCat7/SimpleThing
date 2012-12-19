@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleThing", "SimpleThing\SimpleThing\SimpleThing.csproj", "{5076EEF0-5F67-4380-83E0-750566D5DB3E}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "SimpleThingContent", "SimpleThing\SimpleThingContent\SimpleThingContent.contentproj", "{C64EE0FD-353B-4EA3-9F97-12C4CD848D53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5076EEF0-5F67-4380-83E0-750566D5DB3E}.Debug|x86.ActiveCfg = Debug|x86
+		{5076EEF0-5F67-4380-83E0-750566D5DB3E}.Debug|x86.Build.0 = Debug|x86
+		{5076EEF0-5F67-4380-83E0-750566D5DB3E}.Release|x86.ActiveCfg = Release|x86
+		{5076EEF0-5F67-4380-83E0-750566D5DB3E}.Release|x86.Build.0 = Release|x86
+		{C64EE0FD-353B-4EA3-9F97-12C4CD848D53}.Debug|x86.ActiveCfg = Debug|x86
+		{C64EE0FD-353B-4EA3-9F97-12C4CD848D53}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
