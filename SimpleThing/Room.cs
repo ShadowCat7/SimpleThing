@@ -20,6 +20,8 @@ namespace SimpleThing
         public Entity door;
         public int onScreenX;
         public int onScreenY;
+        public int sizeX;
+        public int sizeY;
         public Room() { }
 
         public virtual void Update(KeyboardState newKeyboardState, KeyboardState oldKeyboardState, MouseState newMouseState,
@@ -29,8 +31,17 @@ namespace SimpleThing
 
     public class GameRoom : Room
     {
-        public GameRoom()
-        { }
+        public GameRoom(int argSizeX, int argSizeY, Player argPlayer, Entity argDoor, Entity argKey, List<Entity> argEntityList)
+        {
+            sizeX = argSizeX;
+            sizeY = argSizeY;
+            player = argPlayer;
+            door = argDoor;
+            key = argKey;
+            entityList = argEntityList;
+
+            deadBodies = new List<Entity>();
+        }
 
         public override void Update(KeyboardState newKeyboardState, KeyboardState oldKeyboardState, MouseState newMouseState, 
             MouseState oldMouseState)
@@ -59,13 +70,42 @@ namespace SimpleThing
                             deadBodies.RemoveAt(0);
                         }
 
-                        player = new Player(100, 100, 5, true, true, ImageHandler.playerSprites);
+                        player = new Player(100, 100, ImageHandler.playerSprites);
                     }
                 }
             }
 
-            onScreenX = (int)player.roomX - Screen.X / 2;
-            onScreenY = (int)player.roomY - Screen.Y / 2;
+            if (player.roomX + player.sprite.Bounds.Center.X < Screen.X / 2)
+            {
+                player.screenX = (int)player.roomX;
+                onScreenX = 0;
+            }
+            else if (player.roomX + player.sprite.Bounds.Center.X > sizeX - Screen.X / 2)
+            {
+                player.screenX = Screen.X - (sizeX - (int)player.roomX);
+                onScreenX = sizeX - Screen.X;
+            }
+            else
+            {
+                player.screenX = Screen.X / 2;
+                onScreenX = (int)player.roomX + player.sprite.Bounds.Center.X + Screen.X / 2;
+            }
+
+            if (player.roomY + player.sprite.Bounds.Center.Y < Screen.Y / 2)
+            {
+                player.screenY = (int)player.roomY;
+                onScreenY = 0;
+            }
+            else if (player.roomY + player.sprite.Bounds.Center.Y > sizeY - Screen.Y / 2)
+            {
+                player.screenY = Screen.Y - (sizeY - (int)player.roomY);
+                onScreenY = sizeY - Screen.Y;
+            }
+            else
+            {
+                player.screenY = Screen.Y / 2;
+                onScreenY = (int)player.roomY + player.sprite.Bounds.Center.Y + Screen.Y / 2;
+            }
 
             for (int i = 0; i < entityList.Count; i++)
             {

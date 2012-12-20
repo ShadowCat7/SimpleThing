@@ -1,8 +1,20 @@
-Content\ground.xnb
 Content\playerRight.xnb
+Content\key.xnb
 Content\playerLeft.xnb
 Content\wall.xnb
 Content\spike.xnb
 Content\Dead.xnb
-Content\key.xnb
 Content\door.xnb
+Content\Menu\doorbutton.xnb
+Content\Menu\groundbutton.xnb
+Content\Menu\keybutton.xnb
+Content\Menu\playerbutton.xnb
+Content\Menu\spikebutton.xnb
+Content\Menu\wallbutton.xnb
+Content\Menu\grid.xnb
+Content\Menu\ymenu.xnb
+Content\Menu\xmenu.xnb
+Content\Super Kills TF2.xnb
+Content\Menu\deletebutton.xnb
+Content\Menu\delete.xnb
+Content\Menu\SpriteFont1.xnb

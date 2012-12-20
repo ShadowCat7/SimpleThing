@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleThing", "SimpleThing\SimpleThing\SimpleThing.csproj", "{5076EEF0-5F67-4380-83E0-750566D5DB3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleThing", "SimpleThing\SimpleThing.csproj", "{5076EEF0-5F67-4380-83E0-750566D5DB3E}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "SimpleThingContent", "SimpleThing\SimpleThingContent\SimpleThingContent.contentproj", "{C64EE0FD-353B-4EA3-9F97-12C4CD848D53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleThingContent", "SimpleThingContent\SimpleThingContent.contentproj", "{C64EE0FD-353B-4EA3-9F97-12C4CD848D53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

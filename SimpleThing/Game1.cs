@@ -9,8 +9,16 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+using System.IO;
+
 namespace SimpleThing
 {
+    public static class Screen
+    {
+        public static int X;
+        public static int Y;
+    }
+
     /// <summary>
     /// This is the main type for your game
     /// </summary>
@@ -64,13 +72,14 @@ namespace SimpleThing
             ImageHandler.playerSprites.Add(0, Content.Load<Texture2D>("playerRight"));
             ImageHandler.playerSprites.Add(Math.PI, Content.Load<Texture2D>("playerLeft"));
             ImageHandler.key = Content.Load<Texture2D>("key");
-            ImageHandler.ground = Content.Load<Texture2D>("ground");
             ImageHandler.wall = Content.Load<Texture2D>("wall");
             ImageHandler.spike = Content.Load<Texture2D>("spike");
             ImageHandler.dead = Content.Load<Texture2D>("dead");
             ImageHandler.door = Content.Load<Texture2D>("door");
 
-            currentRoom = new First();
+            GetRooms.getRooms();
+
+            currentRoom = GetRooms.roomList[0];
         }
 
         /// <summary>
@@ -91,12 +100,6 @@ namespace SimpleThing
         {
             KeyboardState newKeyboardState = Keyboard.GetState();
             MouseState newMouseState = Mouse.GetState();
-
-            if (newKeyboardState.IsKeyDown(Keys.R))
-            { currentRoom = new First(); }
-
-            if (Collision.Test(currentRoom.key, currentRoom.door))
-            { currentRoom = new Second(); }
 
             currentRoom.Update(newKeyboardState, oldKeyboardState, newMouseState, oldMouseState);
 

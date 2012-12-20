@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>ground.png</Source>
-      <Name>ground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\ground.xnb</Output>
-      <Time>2012-09-01T23:40:01.6431061-07:00</Time>
-    </Item>
-    <Item>
       <Source>playerRight.png</Source>
       <Name>playerRight</Name>
       <Importer>TextureImporter</Importer>
@@ -18,6 +9,15 @@
       <Options>None</Options>
       <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\playerRight.xnb</Output>
       <Time>2012-12-11T13:50:41.6676564-07:00</Time>
+    </Item>
+    <Item>
+      <Source>key.png</Source>
+      <Name>key</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\key.xnb</Output>
+      <Time>2012-12-11T16:45:25.5110119-07:00</Time>
     </Item>
     <Item>
       <Source>playerLeft.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\wall.xnb</Output>
-      <Time>2012-09-19T10:20:50.8200478-07:00</Time>
+      <Time>2012-12-19T18:52:08.7298773-07:00</Time>
     </Item>
     <Item>
       <Source>spike.png</Source>
@@ -56,15 +56,6 @@
       <Time>2012-12-11T15:47:14.0033091-07:00</Time>
     </Item>
     <Item>
-      <Source>key.png</Source>
-      <Name>key</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\key.xnb</Output>
-      <Time>2012-12-11T16:45:25.5110119-07:00</Time>
-    </Item>
-    <Item>
       <Source>door.png</Source>
       <Name>door</Name>
       <Importer>TextureImporter</Importer>
@@ -72,6 +63,123 @@
       <Options>None</Options>
       <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\door.xnb</Output>
       <Time>2012-12-11T17:06:07.3310399-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\doorbutton.png</Source>
+      <Name>Menu\doorbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\doorbutton.xnb</Output>
+      <Time>2012-12-19T18:20:17.1365404-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\groundbutton.png</Source>
+      <Name>Menu\groundbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\groundbutton.xnb</Output>
+      <Time>2012-12-19T18:20:23.7189169-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\keybutton.png</Source>
+      <Name>Menu\keybutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\keybutton.xnb</Output>
+      <Time>2012-12-19T18:20:31.0303351-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\playerbutton.png</Source>
+      <Name>Menu\playerbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\playerbutton.xnb</Output>
+      <Time>2012-12-19T18:20:37.3096943-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\spikebutton.png</Source>
+      <Name>Menu\spikebutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\spikebutton.xnb</Output>
+      <Time>2012-12-19T18:20:44.8211239-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\wallbutton.png</Source>
+      <Name>Menu\wallbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\wallbutton.xnb</Output>
+      <Time>2012-12-19T18:20:50.8434683-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\grid.png</Source>
+      <Name>Menu\grid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\grid.xnb</Output>
+      <Time>2012-12-19T19:42:26.6334915-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\ymenu.png</Source>
+      <Name>Menu\ymenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\ymenu.xnb</Output>
+      <Time>2012-12-19T19:57:56.7716924-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\xmenu.png</Source>
+      <Name>Menu\xmenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\xmenu.xnb</Output>
+      <Time>2012-12-19T19:57:30.9362147-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Super Kills TF2.png</Source>
+      <Name>Super Kills TF2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Super Kills TF2.xnb</Output>
+      <Time>2012-12-19T20:37:47.7514486-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\deletebutton.png</Source>
+      <Name>Menu\deletebutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\deletebutton.xnb</Output>
+      <Time>2012-12-19T21:21:11.997403-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\delete.png</Source>
+      <Name>Menu\delete</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\delete.xnb</Output>
+      <Time>2012-12-19T21:41:23.8657179-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Menu\SpriteFont1.spritefont</Source>
+      <Name>Menu\SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\SpriteFont1.xnb</Output>
+      <Time>2012-12-19T20:14:29.9124968-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

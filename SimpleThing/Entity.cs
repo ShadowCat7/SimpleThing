@@ -101,28 +101,28 @@ namespace SimpleThing
                 }
 
                 if (down)
-                { velocityY -= 0.5; }
+                { velocityY -= 0.25; }
             }
         }
         public virtual void Update(KeyboardState newKeyboardState, KeyboardState oldKeyboardState, MouseState newMouseState, 
             MouseState oldMouseState, List<Entity> entityList)
         { }
         public virtual void Draw(SpriteBatch spriteBatch)
-        { spriteBatch.Draw(sprite, new Vector2((int)roomX, (int)roomY), Color.White); }
+        { spriteBatch.Draw(sprite, new Vector2(screenX, screenY), Color.White); }
     }
 
     public class Player : Entity
     {
         Entity heldObject;
 
-        public Player(double argX, double argY, int argVelocityX, bool argSolid, bool argStatic, Dictionary<double, Texture2D> argSprites)
+        public Player(double argX, double argY, Dictionary<double, Texture2D> argSprites)
         {
             roomX = argX;
             roomY = argY;
-            velocityX = argVelocityX;
+            velocityX = 4;
             velocityY = 0;
-            isSolid = argSolid;
-            isStatic = argStatic;
+            isSolid = true;
+            isStatic = true;
             sprites = argSprites;
             sprite = argSprites[0];
 
@@ -152,7 +152,7 @@ namespace SimpleThing
                         if (tempDouble == -Math.PI / 2)
                         { down = false; }
 
-                        if (Collision.Test(this, entityList[i]) && Collision.TestVertical(this, entityList[i]) == -Math.PI / 2)
+                        if (Collision.Test(this, entityList[i])) //&& Collision.TestVertical(this, entityList[i]) == -Math.PI / 2)
                         { roomY = entityList[i].roomY - sprite.Height; }
                     }
                 }
@@ -183,7 +183,7 @@ namespace SimpleThing
                 {
                     velocityY = 0;
                     if (!oldKeyboardState.IsKeyDown(Keys.Space) && newKeyboardState.IsKeyDown(Keys.Space))
-                    { velocityY = 10; }
+                    { velocityY = 6; }
                 }
 
                 if (oldKeyboardState.IsKeyDown(Keys.Space) && !newKeyboardState.IsKeyDown(Keys.Space) && velocityY > 0)
@@ -229,7 +229,7 @@ namespace SimpleThing
             }
 
             if (down)
-            { velocityY -= 1; }
+            { velocityY -= 0.25; }
 
             sprite = sprites[direction];
         }
