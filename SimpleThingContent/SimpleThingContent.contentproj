@@ -42,27 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="playerRight.png">
-      <Name>playerRight</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="key.png">
-      <Name>key</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="playerLeft.png">
-      <Name>playerLeft</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="wall.png">
       <Name>wall</Name>
       <Importer>TextureImporter</Importer>
@@ -70,113 +49,119 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="spike.png">
-      <Name>spike</Name>
+    <Compile Include="playerStand.png">
+      <Name>playerStand</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dead.png">
-      <Name>Dead</Name>
+    <Compile Include="playerShoot.png">
+      <Name>playerShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="door.png">
-      <Name>door</Name>
+    <Compile Include="playerWalk.png">
+      <Name>playerWalk</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\doorbutton.png">
-      <Name>doorbutton</Name>
+    <Compile Include="playerWalkShoot.png">
+      <Name>playerWalkShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\groundbutton.png">
-      <Name>groundbutton</Name>
+    <Compile Include="playerAir.png">
+      <Name>playerAir</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\keybutton.png">
-      <Name>keybutton</Name>
+    <Compile Include="playerAirShoot.png">
+      <Name>playerAirShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\playerbutton.png">
-      <Name>playerbutton</Name>
+    <Compile Include="bullet.png">
+      <Name>bullet</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\spikebutton.png">
-      <Name>spikebutton</Name>
+    <Compile Include="playerAirUp.png">
+      <Name>playerAirUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="playerAirUpShoot.png">
+      <Name>playerAirUpShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\wallbutton.png">
-      <Name>wallbutton</Name>
+    <Compile Include="playerUp.png">
+      <Name>playerUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="playerUpShoot.png">
+      <Name>playerUpShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\grid.png">
-      <Name>grid</Name>
+    <Compile Include="playerWalkUp.png">
+      <Name>playerWalkUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="playerWalkUpShoot.png">
+      <Name>playerWalkUpShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\ymenu.png">
-      <Name>ymenu</Name>
+    <Compile Include="ball.png">
+      <Name>ball</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\xmenu.png">
-      <Name>xmenu</Name>
+    <Compile Include="playerAirDown.png">
+      <Name>playerAirDown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="playerAirDownShoot.png">
+      <Name>playerAirDownShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\SpriteFont1.spritefont">
+    <Compile Include="SpriteFont1.spritefont">
       <Name>SpriteFont1</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Super Kills TF2.png">
-      <Name>Super Kills TF2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Menu\deletebutton.png">
-      <Name>deletebutton</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Menu\delete.png">
-      <Name>delete</Name>
+    <Compile Include="player.png">
+      <Name>player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

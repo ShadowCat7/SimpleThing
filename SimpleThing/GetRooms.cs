@@ -19,6 +19,8 @@ namespace SimpleThing
             {
                 reader = new StreamReader("second.smf");
 
+                int count = 0;
+
                 while (!reader.EndOfStream)
                 {
                     int tempSizeX = Convert.ToInt32(reader.ReadLine());
@@ -30,13 +32,13 @@ namespace SimpleThing
 
                     int tempDoorX = Convert.ToInt32(reader.ReadLine());
                     int tempDoorY = Convert.ToInt32(reader.ReadLine());
-                    Entity tempDoor = new Entity(tempDoorX, tempDoorY, false, false, true, ImageHandler.door);
+                    StaticEntity tempDoor = new StaticEntity(tempDoorX, tempDoorY, false, false, true, ImageHandler.door);
 
                     int tempKeyX = Convert.ToInt32(reader.ReadLine());
                     int tempKeyY = Convert.ToInt32(reader.ReadLine());
-                    Entity tempKey = new Entity(tempKeyX, tempKeyY, false, false, false, ImageHandler.key);
+                    StaticEntity tempKey = new StaticEntity(tempKeyX, tempKeyY, false, false, false, ImageHandler.key);
 
-                    List<Entity> entityList = new List<Entity>();
+                    List<StaticEntity> entityList = new List<StaticEntity>();
 
                     while (reader.Peek() != '*')
                     {
@@ -47,7 +49,7 @@ namespace SimpleThing
                         bool argStatic = Convert.ToBoolean(reader.ReadLine());
                         string imageName = reader.ReadLine();
 
-                        entityList.Add(new Entity(argX, argY, argDeath, argSolid, argStatic, ImageHandler.getImage(imageName)));
+                        entityList.Add(new StaticEntity(argX, argY, argDeath, argSolid, argStatic, ImageHandler.getImage(imageName)));
                     }
 
                     entityList.Add(tempDoor);

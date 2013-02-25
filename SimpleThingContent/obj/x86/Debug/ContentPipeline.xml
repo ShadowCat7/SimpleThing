@@ -2,184 +2,175 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>playerRight.png</Source>
-      <Name>playerRight</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\playerRight.xnb</Output>
-      <Time>2012-12-11T13:50:41.6676564-07:00</Time>
-    </Item>
-    <Item>
-      <Source>key.png</Source>
-      <Name>key</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\key.xnb</Output>
-      <Time>2012-12-11T16:45:25.5110119-07:00</Time>
-    </Item>
-    <Item>
-      <Source>playerLeft.png</Source>
-      <Name>playerLeft</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\playerLeft.xnb</Output>
-      <Time>2012-12-11T16:37:04.0903323-07:00</Time>
-    </Item>
-    <Item>
       <Source>wall.png</Source>
       <Name>wall</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\wall.xnb</Output>
-      <Time>2012-12-19T18:52:08.7298773-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\wall.xnb</Output>
+      <Time>2013-02-22T21:40:00.2057354-07:00</Time>
     </Item>
     <Item>
-      <Source>spike.png</Source>
-      <Name>spike</Name>
+      <Source>playerStand.png</Source>
+      <Name>playerStand</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\spike.xnb</Output>
-      <Time>2012-12-11T13:46:10.0041181-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerStand.xnb</Output>
+      <Time>2013-02-23T01:12:52.6002746-07:00</Time>
     </Item>
     <Item>
-      <Source>Dead.png</Source>
-      <Name>Dead</Name>
+      <Source>playerShoot.png</Source>
+      <Name>playerShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Dead.xnb</Output>
-      <Time>2012-12-11T15:47:14.0033091-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerShoot.xnb</Output>
+      <Time>2013-02-23T01:10:52.8184234-07:00</Time>
     </Item>
     <Item>
-      <Source>door.png</Source>
-      <Name>door</Name>
+      <Source>playerWalk.png</Source>
+      <Name>playerWalk</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\door.xnb</Output>
-      <Time>2012-12-11T17:06:07.3310399-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerWalk.xnb</Output>
+      <Time>2013-02-23T01:13:33.7526283-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\doorbutton.png</Source>
-      <Name>Menu\doorbutton</Name>
+      <Source>playerWalkShoot.png</Source>
+      <Name>playerWalkShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\doorbutton.xnb</Output>
-      <Time>2012-12-19T18:20:17.1365404-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerWalkShoot.xnb</Output>
+      <Time>2013-02-23T01:13:58.2030268-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\groundbutton.png</Source>
-      <Name>Menu\groundbutton</Name>
+      <Source>playerAir.png</Source>
+      <Name>playerAir</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\groundbutton.xnb</Output>
-      <Time>2012-12-19T18:20:23.7189169-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerAir.xnb</Output>
+      <Time>2013-02-23T01:11:42.7662803-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\keybutton.png</Source>
-      <Name>Menu\keybutton</Name>
+      <Source>playerAirShoot.png</Source>
+      <Name>playerAirShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\keybutton.xnb</Output>
-      <Time>2012-12-19T18:20:31.0303351-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerAirShoot.xnb</Output>
+      <Time>2013-02-23T01:12:27.2718259-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\playerbutton.png</Source>
-      <Name>Menu\playerbutton</Name>
+      <Source>bullet.png</Source>
+      <Name>bullet</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\playerbutton.xnb</Output>
-      <Time>2012-12-19T18:20:37.3096943-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\bullet.xnb</Output>
+      <Time>2013-02-22T23:24:59.1800161-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\spikebutton.png</Source>
-      <Name>Menu\spikebutton</Name>
+      <Source>playerAirUp.png</Source>
+      <Name>playerAirUp</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\spikebutton.xnb</Output>
-      <Time>2012-12-19T18:20:44.8211239-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerAirUp.xnb</Output>
+      <Time>2013-02-23T01:11:09.438374-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\wallbutton.png</Source>
-      <Name>Menu\wallbutton</Name>
+      <Source>playerAirUpShoot.png</Source>
+      <Name>playerAirUpShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\wallbutton.xnb</Output>
-      <Time>2012-12-19T18:20:50.8434683-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerAirUpShoot.xnb</Output>
+      <Time>2013-02-23T01:15:46.4562186-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\grid.png</Source>
-      <Name>Menu\grid</Name>
+      <Source>playerUp.png</Source>
+      <Name>playerUp</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\grid.xnb</Output>
-      <Time>2012-12-19T19:42:26.6334915-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerUp.xnb</Output>
+      <Time>2013-02-23T01:13:10.4492955-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\ymenu.png</Source>
-      <Name>Menu\ymenu</Name>
+      <Source>playerUpShoot.png</Source>
+      <Name>playerUpShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\ymenu.xnb</Output>
-      <Time>2012-12-19T19:57:56.7716924-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerUpShoot.xnb</Output>
+      <Time>2013-02-23T11:55:07.5182034-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\xmenu.png</Source>
-      <Name>Menu\xmenu</Name>
+      <Source>playerWalkUp.png</Source>
+      <Name>playerWalkUp</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\xmenu.xnb</Output>
-      <Time>2012-12-19T19:57:30.9362147-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerWalkUp.xnb</Output>
+      <Time>2013-02-23T01:14:22.3784096-07:00</Time>
     </Item>
     <Item>
-      <Source>Super Kills TF2.png</Source>
-      <Name>Super Kills TF2</Name>
+      <Source>playerWalkUpShoot.png</Source>
+      <Name>playerWalkUpShoot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Super Kills TF2.xnb</Output>
-      <Time>2012-12-19T20:37:47.7514486-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerWalkUpShoot.xnb</Output>
+      <Time>2013-02-23T01:10:17.809421-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\deletebutton.png</Source>
-      <Name>Menu\deletebutton</Name>
+      <Source>ball.png</Source>
+      <Name>ball</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\deletebutton.xnb</Output>
-      <Time>2012-12-19T21:21:11.997403-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\ball.xnb</Output>
+      <Time>2013-02-23T12:27:27.4241597-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\delete.png</Source>
-      <Name>Menu\delete</Name>
+      <Source>playerAirDown.png</Source>
+      <Name>playerAirDown</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\delete.xnb</Output>
-      <Time>2012-12-19T21:41:23.8657179-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerAirDown.xnb</Output>
+      <Time>2013-02-23T12:56:22.3693928-07:00</Time>
     </Item>
     <Item>
-      <Source>Menu\SpriteFont1.spritefont</Source>
-      <Name>Menu\SpriteFont1</Name>
+      <Source>playerAirDownShoot.png</Source>
+      <Name>playerAirDownShoot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\playerAirDownShoot.xnb</Output>
+      <Time>2013-02-23T13:00:42.5482742-07:00</Time>
+    </Item>
+    <Item>
+      <Source>player.png</Source>
+      <Name>player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\player.xnb</Output>
+      <Time>2013-02-24T17:27:33.9996561-07:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\Menu\SpriteFont1.xnb</Output>
-      <Time>2012-12-19T20:14:29.9124968-07:00</Time>
+      <Output>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2013-02-24T16:55:16.806855-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -188,9 +179,9 @@
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
       <RootDirectory>C:\Users\Attridge\Programs\SimpleThing\SimpleThingContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\</LoggerRootDirectory>
+      <LoggerRootDirectory>C:\Users\Attridge\Programs\SimpleThing\MapMaker\</LoggerRootDirectory>
       <IntermediateDirectory>C:\Users\Attridge\Programs\SimpleThing\SimpleThingContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Attridge\Programs\SimpleThing\SimpleThing\bin\x86\Debug\Content\</OutputDirectory>
+      <OutputDirectory>C:\Users\Attridge\Programs\SimpleThing\MapMaker\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

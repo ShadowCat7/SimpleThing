@@ -13,110 +13,76 @@ namespace SimpleThing
 {
     public static class Collision
     {
-        public static double TestVertical(Entity collider, Entity collideWith)
+        public static bool testUp(StaticEntity mover, StaticEntity checkAgainst)
         {
-            if ((collider.roomX >= collideWith.roomX && collider.roomX <= collideWith.roomX +
-                collideWith.sprite.Width - 1) || (collider.roomX + collider.sprite.Width >= collideWith.roomX + 1 &&
-                collider.roomX + collider.sprite.Width <= collideWith.roomX + collideWith.sprite.Width))
+            if (mover.getRoomY() <= checkAgainst.getRoomY() + checkAgainst.getSizeY() + 1 && mover.getRoomY() + mover.getSizeY() > checkAgainst.getRoomY())
             {
-                if (collider.roomY <= collideWith.roomY + collideWith.sprite.Height && collider.roomY >=
-                    collideWith.roomY)
-                { return Math.PI / 2; }
-                if (collider.roomY + collider.sprite.Height >= collideWith.roomY && collider.roomY +
-                    collider.sprite.Height <= collideWith.roomY + collideWith.sprite.Height)
-                { return -Math.PI / 2; }
+                if (mover.getRoomX() >= checkAgainst.getRoomX() && mover.getRoomX() <= checkAgainst.getRoomX() + checkAgainst.getSizeX())
+                { return true; }
+                else if (mover.getRoomX() + mover.getSizeX() >= checkAgainst.getRoomX() &&
+                    mover.getRoomX() + mover.getSizeX() <= checkAgainst.getRoomX() + checkAgainst.getSizeX())
+                { return true; }
             }
-            return 10;
+
+            return false;
         }
-        /// <summary>
-        /// Tests any collisions on the left and right sides of an element.
-        /// </summary>
-        /// <param name="collider">The moving element.</param>
-        /// <param name="collideWith">The element being collided with.</param>
-        /// <returns>Returns the direction in radians, or 10 if there were no collision.</returns>
-        public static double TestLeft(Entity collider, Entity collideWith)
+        public static bool testDown(StaticEntity mover, StaticEntity checkAgainst)
         {
-            if ((collider.roomY >= collideWith.roomY && collider.roomY <= collideWith.roomY +
-                collideWith.sprite.Height - 1) || (collider.roomY + collider.sprite.Height >= collideWith.roomY + 1 &&
-                collider.roomY + collider.sprite.Height <= collideWith.roomY + collideWith.sprite.Height))
+            if (mover.getRoomY() + mover.getSizeY() >= checkAgainst.getRoomY() - 1 && mover.getRoomY() < checkAgainst.getRoomY() + checkAgainst.getSizeY())
             {
-                if (collider.roomX <= collideWith.roomX + collideWith.sprite.Width + 2 && collider.roomX >= collideWith.roomX)
-                { return Math.PI; }
+                if (mover.getRoomX() >= checkAgainst.getRoomX() && mover.getRoomX() <= checkAgainst.getRoomX() + checkAgainst.getSizeX())
+                { return true; }
+                else if (mover.getRoomX() + mover.getSizeX() >= checkAgainst.getRoomX() &&
+                    mover.getRoomX() + mover.getSizeX() <= checkAgainst.getRoomX() + checkAgainst.getSizeX())
+                { return true; }
             }
 
-            if ((collideWith.roomY >= collider.roomY && collideWith.roomY <= collider.roomY +
-                collider.sprite.Height - 1) || (collideWith.roomY + collideWith.sprite.Height >= collider.roomY + 1 &&
-                collideWith.roomY + collideWith.sprite.Height <= collider.roomY + collider.sprite.Height))
-            {
-                if (collideWith.roomX <= collider.roomX + collider.sprite.Width && collideWith.roomX >= collider.roomX)
-                { return Math.PI; }
-            }
-
-            return 10;
+            return false;
         }
-
-        public static double TestRight(Entity collider, Entity collideWith)
+        public static bool testLeft(StaticEntity mover, StaticEntity checkAgainst)
         {
-            if ((collider.roomY >= collideWith.roomY && collider.roomY <= collideWith.roomY +
-                collideWith.sprite.Height - 1) || (collider.roomY + collider.sprite.Height >= collideWith.roomY + 1 &&
-                collider.roomY + collider.sprite.Height <= collideWith.roomY + collideWith.sprite.Height))
+            if (mover.getRoomX() <= checkAgainst.getRoomX() + checkAgainst.getSizeX() + 1 && mover.getRoomX() + mover.getSizeX() > checkAgainst.getRoomX())
             {
-                if (collider.roomX + collider.sprite.Width + 1 >= collideWith.roomX && collider.roomX + collider.sprite.Width <=
-                    collideWith.roomX + collideWith.sprite.Width)
-                { return 0; }
+                if (mover.getRoomY() >= checkAgainst.getRoomY() && mover.getRoomY() <= checkAgainst.getRoomY() + checkAgainst.getSizeY())
+                { return true; }
+                else if (mover.getRoomY() + mover.getSizeY() >= checkAgainst.getRoomY() && 
+                    mover.getRoomY() + mover.getSizeY() <= checkAgainst.getRoomY() + checkAgainst.getSizeY())
+                { return true; }
             }
 
-            if ((collideWith.roomY >= collider.roomY && collideWith.roomY <= collider.roomY +
-                collider.sprite.Height - 1) || (collideWith.roomY + collideWith.sprite.Height >= collider.roomY + 1 &&
-                collideWith.roomY + collideWith.sprite.Height <= collider.roomY + collider.sprite.Height))
-            {
-                if (collideWith.roomX + collideWith.sprite.Width + 1 >= collider.roomX && collideWith.roomX + collideWith.sprite.Width <=
-                    collider.roomX + collider.sprite.Width)
-                { return 0; }
-            }
-
-            return 10;
+            return false;
         }
-
-        public static bool Test(Entity collider, Entity collideWith)
+        public static bool testRight(StaticEntity mover, StaticEntity checkAgainst)
         {
-            if (collider.roomX >= collideWith.roomX && collider.roomX <= collideWith.roomX + collideWith.sprite.Width)
+            if (mover.getRoomX() + mover.getSizeX() >= checkAgainst.getRoomX() - 1 && mover.getRoomX() < checkAgainst.getRoomX() + checkAgainst.getSizeX())
             {
-                if (collider.roomY >= collideWith.roomY && collider.roomY <= collideWith.roomY + collideWith.sprite.Height)
+                if (mover.getRoomY() >= checkAgainst.getRoomY() && mover.getRoomY() <= checkAgainst.getRoomY() + checkAgainst.getSizeY())
                 { return true; }
-                if (collider.roomY + collider.sprite.Height >= collideWith.roomY && collider.roomY + collider.sprite.Height <=
-                    collideWith.roomY + collideWith.sprite.Height)
-                { return true; }
-            }
-            if (collider.roomX + collider.sprite.Width >= collideWith.roomX && collider.roomX + collider.sprite.Width <=
-                collideWith.roomX + collideWith.sprite.Width)
-            {
-                if (collider.roomY >= collideWith.roomY && collider.roomY <= collideWith.roomY + collideWith.sprite.Height)
-                { return true; }
-                if (collider.roomY + collider.sprite.Height >= collideWith.roomY && collider.roomY + collider.sprite.Height <=
-                    collideWith.roomY + collideWith.sprite.Height)
+                else if (mover.getRoomY() + mover.getSizeY() >= checkAgainst.getRoomY() &&
+                    mover.getRoomY() + mover.getSizeY() <= checkAgainst.getRoomY() + checkAgainst.getSizeY())
                 { return true; }
             }
 
-            Entity tempElement = collider;
-            collider = collideWith;
-            collideWith = tempElement;
-
-            if (collider.roomX >= collideWith.roomX && collider.roomX <= collideWith.roomX + collideWith.sprite.Width)
+            return false;
+        }
+        public static bool test(StaticEntity mover, StaticEntity checkAgainst)
+        {
+            if (testCoordinate(mover.getRoomX(), mover.getRoomY(), checkAgainst))
+            { return true; }
+            else if (testCoordinate(mover.getRoomX() + mover.getSizeX(), mover.getRoomY(), checkAgainst))
+            { return true; }
+            else if (testCoordinate(mover.getRoomX(), mover.getRoomY() + mover.getSizeY(), checkAgainst))
+            { return true; }
+            else if (testCoordinate(mover.getRoomX() + mover.getSizeX(), mover.getRoomY() + mover.getSizeY(), checkAgainst))
+            { return true; }
+            else
+            { return false; }
+        }
+        public static bool testCoordinate(double xPosition, double yPosition, StaticEntity checkInEntity)
+        {
+            if (xPosition >= checkInEntity.getRoomX() && xPosition <= checkInEntity.getRoomX() + checkInEntity.getSizeX())
             {
-                if (collider.roomY >= collideWith.roomY && collider.roomY <= collideWith.roomY + collideWith.sprite.Height)
-                { return true; }
-                if (collider.roomY + collider.sprite.Height >= collideWith.roomY && collider.roomY + collider.sprite.Height <=
-                    collideWith.roomY + collideWith.sprite.Height)
-                { return true; }
-            }
-            if (collider.roomX + collider.sprite.Width >= collideWith.roomX && collider.roomX + collider.sprite.Width <=
-                collideWith.roomX + collideWith.sprite.Width)
-            {
-                if (collider.roomY >= collideWith.roomY && collider.roomY <= collideWith.roomY + collideWith.sprite.Height)
-                { return true; }
-                if (collider.roomY + collider.sprite.Height >= collideWith.roomY && collider.roomY + collider.sprite.Height <=
-                    collideWith.roomY + collideWith.sprite.Height)
+                if (yPosition >= checkInEntity.getRoomY() && yPosition <= checkInEntity.getRoomY() + checkInEntity.getSizeY())
                 { return true; }
             }
 

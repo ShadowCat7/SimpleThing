@@ -11,52 +11,44 @@ using Microsoft.Xna.Framework.Media;
 
 namespace MapMaker
 {
-    public class Interface
+    public class Button
     {
         public int screenX, screenY;
         public Texture2D sprite;
-        public string entityName;
+        public int sizeX, sizeY;
+        public string name;
 
-        public Interface(int argScreenX, int argScreenY, string argName, Texture2D argSprite)
+        protected Button() { }
+        public Button(int argScreenX, int argScreenY, string argName, Texture2D argSprite)
         {
             screenX = argScreenX;
             screenY = argScreenY;
+            name = argName;
+            sizeX = 64;
+            sizeY = 64;
             sprite = argSprite;
-            entityName = argName;
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         { spriteBatch.Draw(sprite, new Vector2(screenX, screenY), Color.White); }
     }
 
-    public class Entity
+    public class Entity : Button
     {
         public int roomX, roomY;
-        public int screenX, screenY;
-        public Texture2D sprite;
-        public string name;
-        public bool isKey;
-        public bool isTransition;
-        public bool isSolid;
-        public bool isStatic;
-        public bool isDeath;
+
         public Dictionary<double, Texture2D> sprites;
 
-        public Entity() { }
-
-        public Entity(int argX, int argY, string argName, bool argDeath, bool argSolid, bool argStatic, Texture2D argSprite)
+        public Entity(int argX, int argY, string argName, Texture2D argSprite)
         {
             roomX = argX;
             roomY = argY;
             name = argName;
-            isSolid = argSolid;
-            isStatic = argStatic;
-            isDeath = argDeath;
             sprite = argSprite;
-        }
 
-        public void Draw(SpriteBatch spriteBatch)
-        { spriteBatch.Draw(sprite, new Vector2(screenX, screenY), Color.White); }
+            sizeX = sprite.Width;
+            sizeY = sprite.Height;
+        }
     }
 
     public class Camera

@@ -13,28 +13,20 @@ using System.IO;
 
 namespace SimpleThing
 {
-    public static class Screen
-    {
-        public static int X;
-        public static int Y;
-    }
-
-    /// <summary>
-    /// This is the main type for your game
-    /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
 
-        KeyboardState oldKeyboardState;
-        MouseState oldMouseState;
+        private KeyboardState oldKeyboardState;
+        private MouseState oldMouseState;
 
-        Room currentRoom;
+        private Room currentRoom;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            IsFixedTimeStep = false;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
@@ -44,64 +36,42 @@ namespace SimpleThing
             oldKeyboardState = new KeyboardState();
             oldMouseState = new MouseState();
         }
-
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
         protected override void Initialize()
-        {
-            // TODO: Add your initialization logic here
+        { base.Initialize(); }
 
-            base.Initialize();
-        }
-
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            ImageHandler.playerSprites = new Dictionary<double, Texture2D>();
+            ImageHandler.playerStand = new SpriteSheet(Content.Load<Texture2D>("playerStand"), 4);
+            ImageHandler.playerShoot = new SpriteSheet(Content.Load<Texture2D>("playerShoot"), 4);
+            ImageHandler.playerUp = new SpriteSheet(Content.Load<Texture2D>("playerUp"), 4);
+            ImageHandler.playerUpShoot = new SpriteSheet(Content.Load<Texture2D>("playerUpShoot"), 4);
+            ImageHandler.playerWalk = new SpriteSheet(Content.Load<Texture2D>("playerWalk"), 8);
+            ImageHandler.playerWalkShoot = new SpriteSheet(Content.Load<Texture2D>("playerWalkShoot"), 8);
+            ImageHandler.playerWalkUp = new SpriteSheet(Content.Load<Texture2D>("playerWalkUp"), 8);
+            ImageHandler.playerWalkUpShoot = new SpriteSheet(Content.Load<Texture2D>("playerWalkUpShoot"), 8);
+            ImageHandler.playerAir = new SpriteSheet(Content.Load<Texture2D>("playerAir"), 4);
+            ImageHandler.playerAirShoot = new SpriteSheet(Content.Load<Texture2D>("playerAirShoot"), 4);
+            ImageHandler.playerAirUp = new SpriteSheet(Content.Load<Texture2D>("playerAirUp"), 4);
+            ImageHandler.playerAirUpShoot = new SpriteSheet(Content.Load<Texture2D>("playerAirUpShoot"), 4);
+            ImageHandler.playerAirDown = new SpriteSheet(Content.Load<Texture2D>("playerAirDown"), 4);
+            ImageHandler.playerAirDownShoot = new SpriteSheet(Content.Load<Texture2D>("playerAirDownShoot"), 4);
 
-            ImageHandler.playerSprites.Add(0, Content.Load<Texture2D>("playerRight"));
-            ImageHandler.playerSprites.Add(Math.PI, Content.Load<Texture2D>("playerLeft"));
-            ImageHandler.key = Content.Load<Texture2D>("key");
             ImageHandler.wall = Content.Load<Texture2D>("wall");
-            ImageHandler.spike = Content.Load<Texture2D>("spike");
-            ImageHandler.dead = Content.Load<Texture2D>("dead");
-            ImageHandler.door = Content.Load<Texture2D>("door");
+            ImageHandler.bullet = Content.Load<Texture2D>("bullet");
+            ImageHandler.ball = Content.Load<Texture2D>("ball");
 
-            GetRooms.getRooms();
-
-            currentRoom = GetRooms.roomList[0];
+            currentRoom = new GameRoom(1600, 960);
         }
+        protected override void UnloadContent() { }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
-        protected override void UnloadContent()
-        {
-            // TODO: Unload any non ContentManager content here
-        }
-
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
             KeyboardState newKeyboardState = Keyboard.GetState();
             MouseState newMouseState = Mouse.GetState();
 
-            currentRoom.Update(newKeyboardState, oldKeyboardState, newMouseState, oldMouseState);
+            currentRoom.update(gameTime, newKeyboardState, oldKeyboardState, newMouseState, oldMouseState);
 
             oldKeyboardState = newKeyboardState;
             oldMouseState = newMouseState;
@@ -109,18 +79,12 @@ namespace SimpleThing
             base.Update(gameTime);
         }
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
-
-            currentRoom.Draw(spriteBatch);
-
+            currentRoom.draw(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);

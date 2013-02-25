@@ -13,27 +13,21 @@ namespace MapMaker
 {
     public static class ImageHandler
     {
-        public static Dictionary<double, Texture2D> playerSprites;
-        public static Texture2D dead;
-        public static Texture2D key;
+        public static Texture2D player;
+        public static Texture2D bullet;
         public static Texture2D wall;
-        public static Texture2D spike;
-        public static Texture2D door;
-
-        public static Texture2D delete;
+        public static Texture2D ball;
 
         public static Texture2D getImage(string imageName)
         {
-            if (imageName == "wall")
+            if (imageName == "player")
+            { return player; }
+            else if (imageName == "bullet")
+            { return bullet; }
+            else if (imageName == "wall")
             { return wall; }
-            else if (imageName == "spike")
-            { return spike; }
-            else if (imageName == "player")
-            { return playerSprites[0]; }
-            else if (imageName == "key")
-            { return key; }
-            else if (imageName == "door")
-            { return door; }
+            else if (imageName == "ball")
+            { return ball; }
             else
             { return null; }
         }
